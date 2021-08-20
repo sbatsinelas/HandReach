@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+nav {
+	width: 100%;
+	height: 110px;
+	margin: 0;
+	z-index: 99;
+	position: relative;
+	background-color: #fff;
+}
+
+#menu {
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 10px;
+}
+
+#menu li {
+	height: 75px;
+	width: 150px;
+	float: left;
+	text-align: center;
+	list-style: none;
+	border: 1px solid #000;
+	border-radius: 20px;
+	padding: 0;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+#menu a {
+	padding-top: 30px;
+	padding-bottom: 20px;
+	text-decoration: none;
+	display: block;
+	color: #000;
+	width: 100%;
+	
+}
+
+#menu #logobox {
+	width: 300px;
+	border: none;
+}
+
+#menu #logo {
+	padding-top: 10px;
+	width: 300px;
+}
+
+#menu #logo:hover {
+	background-color: #fff;
+}
+
+#menu li:hover {
+	background-color: blue;
+}
+
+#menu li a:hover {
+	color: white;
+}
+
+#menu li ul {
+	display: none;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#menu li:hover ul {
+	display: block;
+}
+
+#menu li ul li {
+	width: 150px;
+	height: 75px;
+	background-color: white;
+	border-radius: 0px;
+	margin: 0px;
+}
+
+#menu li ul li a {
+	color: black;
+}
+
+#menu li ul li a:hover {
+	background-color: blue;
+	color: white;
+	border-radius: 0px;
+}

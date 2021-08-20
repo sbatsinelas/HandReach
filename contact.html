@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="css/handreach.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.min.js"></script>
+ <script src="js/jquery.validate.min.js"></script>
+ 	<script>
+        $(document).ready(function() {
+          $('#inquiry').validate( {
+            rules: {
+              name: {
+                required: true,
+                minLength: 3
+              },
+              email: {
+                required: true,
+                email: true
+              },
+              mess: {
+                required: true
+              }
+            },
+            messages: {
+              name: {
+                required: "Please enter your name."
+              },
+              email: {
+                required: "Please enter a valid e-mail address.",
+                email: "Please enter a valid e-mail address."
+              },
+              mess: {
+                required: "Please enter your message."
+              }
+            }
+          }); // end validate
+          $('#inquiry').submit(function() {
+            if (! /^([\w-\.]+)@([\w-\.]+)\.(com|org|net)+$/.test($('#email').val())) {
+		            alert('Please supply a valid email address that ends in .com, .net, or .org');
+		            $('#email').focus();
+		            return false;
+               }
+          }); // end submit
+        }); // end ready
+    </script>
+</head>
+
+<body>
+	 	<nav class="navbar navbar-expand-sm col-md-8 col-xl-6 offset-lg-0 col-sm-12 offset-xl-1 offset-md-0">
+          <ul id="menu" class="navbar-nav">
+            <li id="logobox"><a href="index.html"  id="logo"><img src="images/h_logo.gif" alt="HandReach logo" width="100%" height="100%"/></a></li> 
+            <li class="nav-item"><a href="#">About Us</a>
+              <ul>
+                <li class="nav-item"><a href="about.html">Who We Are</a></li>
+                <li class="nav-item"><a href="history.html">History</a></li>
+                <li class="nav-item"><a href="staff.html">Staff</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#">Programs</a>
+              <ul>
+                <li class="nav-item"><a href="healing.html">Children's Healing</a></li>
+                <li class="nav-item"><a href="beat.html">Beat Brigade</a></li>
+                <li class="nav-item"><a href="general.html">General Education</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="stories.html">Stories of Hope</a></li>
+            <li class="nav-item"><a href="donate.html">Get Involved</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+          </ul>
+	</nav>
+	<header>
+	  <h1>Contact Us</h1>
+	</header>
+	<br />
+	<section class="row">
+		<article class="col-10 col-xl-6">
+		  <h4><strong>Contact Form</strong></h4>
+          <p>Fill out the form below for any inquiries! We will typically respond in 1-2 business days.</p>
+
+          <form id="inquiry">
+              <label for="name">Name</label>
+              <input name="name" type="text" id="name">
+              <label for="email">E-Mail Address</label>
+              <input name="email" type="text" id="email">
+              <label for="mess">Message</label>
+			  <textarea name="mess" cols="60" rows="4" class="col-xl-8 offset-xl-2"></textarea>
+				<input type="submit" value="Submit" id="submit">
+          </form>
+      </article>
+		
+		<aside class="col-10 col-xl-3">
+			<h5><strong>Mailing Address</strong></h5>
+			<p>
+				<em>HandReach</em><br/>
+				P.O. Box 763<br />
+				East Falmouth, MA 02356
+			</p>
+			<h5><strong>Phone</strong></h5>
+			<p>
+				(978) 621-5677
+			</p>
+			<h5><strong>E-Mail</strong></h5>
+			<p>
+				<a href="mailto:steve@handreach.org">steve@handreach.org</a>
+			</p>
+			<img src="images/contact_1.jpg" alt="Contact Us" height="100" />
+		</aside>
+	</section>
+	<br /><br />
+	<section class="row">
+		<article id="awards" class="d-none d-lg-block">
+			<img src="images/top_rated2012.png" alt="Top-Rated 2012" height="40">&nbsp;
+			<img src="images/greatnonprofit_2013.png" alt="GreatNonProfits Top Rated in 2013" height="60">
+			<img src="images/chase.png" alt="Chase Winning Charity" height="70">
+			<img src="images/2014-top-rated.jpg" alt="Top Rated 2014" height="60">&nbsp;&nbsp;
+			<img src="images/2016.jpg" alt="Top Rated 2016" height="60">&nbsp;&nbsp;
+			<img src="images/guidestar-gold.png" alt="GuideStar Gold" height="70">			
+	  </article>
+		
+		<aside id="social">
+			<a href="https://www.facebook.com/HandReach" title="Facebook Page" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>&nbsp;&nbsp;&nbsp;
+		  	<a href="https://twitter.com/HandReach" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>&nbsp;&nbsp;&nbsp;
+		    <a href="http://www.linkedin.com/groups/HandReach-3105961" target="_blank"><img src="images/linked_in.png" alt="LinkedIn"></a><br />
+			<a href="donate.html"><img src="images/paypal.png" width="100%" alt="Click to Donate!"></a>
+		</aside>
+	</section>
+	<br />
+	<footer>
+	  <p><em>&copy; 2019 HandReach &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P.O. Box 763 East Falmouth, MA</em></p>
+	</footer>
+</body>
+</html>
